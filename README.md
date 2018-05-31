@@ -8,14 +8,6 @@ it minimal and simple so it can benefit others.
 
 To keep things simple I have not used any front-end framework. It is simple HTML 5 Boilerplate. So can concentrate only on CSS part and can have maximum flexibility when it comes with some experiments.
 
-### Prerequisites
-
-What things you need to install the software and how to install them
-
-```
-Give examples
-```
-
 ### Installing
 
 For now nothing is needed, just any server should be installed on your machine to serve the pages.
@@ -27,7 +19,7 @@ To install: `npm install http-server -g`
 
 **Please Note:**
 - *It will install http-server globally.*
-- *I expect you have node js installed.*
+- *I expect you have node js installed.* If not please follow the link [Node JS](https://nodejs.org/en/). 
 
 ## Structure
 
