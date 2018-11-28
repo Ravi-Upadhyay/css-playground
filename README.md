@@ -25,6 +25,8 @@ To install: `npm install http-server -g`
 
 This project follows following architecture and will cover following features:
 
+1. [Flex Box](https://github.com/Ravi-Upadhyay/css-playground/flex-box)
+
 ## Authors
 
 * **Ravi Upadhay**
