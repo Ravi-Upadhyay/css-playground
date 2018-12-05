@@ -38,4 +38,4 @@ This project follows following architecture and will cover following features:
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
->>>>>>> 8c84916fa62f6183076092a2a9df85470809d933
+
