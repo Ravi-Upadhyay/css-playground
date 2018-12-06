@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>CSS-Specificity</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+    <h1>CSS Specificity</h1>
+
+    <p>
+        Specificity is the means by which a browser decides which CSS property values are 
+        the most relevant to an element and therefore will be applied. Specificity is only 
+        based on the matching rules which are composed of CSS selectors of different sorts.
+        <span>Says MDN</span>
+    </p>
+
+    <h3>CSS Terminology</h3>
+    <p>
+        Before diving deep let us get to know some terminology related to CSS and this concept.
+    </p>
+
+    <ul>
+        <li><h5>Selector: </h5> Selectors will let you select particular element. 
+            That can be selected by element selector, class selector, id selector.
+        </li>
+        <li><h5>Pseudo class: </h5> Pseudo classes used to select special state of element.</li>
+        <li><h5>Pseudo element: </h5> Pseudo elements are used to style specified parts of elements</li>
+        
+    </ul>
+
+    <h3>How to calculate</h3>
+    <ol>
+        <li>We can seperate CSS rules to 4 main categories and each of them adds different value to specificity score.</li>
+        <li>The correct notation of specificity score takes a form that separates points by coma in an appropriate order. i.e. (0,0,0,0)</li>
+        <li>Now let's start adding: 
+            <ol>
+                <li>Inline Style: Always take precedence. Adds (1,0,0,0) to the score.</li>
+                <li>ID: Each Id adds (0,1,0,0) to the score.</li>
+                <li>Class, Pseudo-Class and Attribute: They adds (0,0,1,0) to the score.</li>
+                <li>Element, Pseudo-Element: They adds (0,0,0,1) to the score.</li>
+            </ol>
+        </li>
+        <li>Few exceptions to keep in mind:
+            <ol>
+                <li><span>!important</span> can override the inline style.</li>
+                <li>Selector inside the <span>:not</span> Pseudo-Class gets counted. 
+                    The Pseudo-Class itself does not gets counted.
+                </li>
+                <li>Tie! If two selectors have same specificity, Order will come into play.</li>
+            </ol>
+        </li>
+    </ol>
+
+    <div>For more details visit those links:
+        <ol>
+            <li> <a href="https://pawelgrzybek.com/css-specificity-explained/">Nice Explanantion </a> </li>
+        </ol>
+    </div>
+</body>
+</html>
+<!-- IE needs 512+ bytes: https://blogs.msdn.microsoft.com/ieinternals/2010/08/18/friendly-http-error-pages/ -->
