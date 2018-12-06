@@ -8,6 +8,8 @@ it minimal and simple so it can benefit others.
 
 > **// TODO: Under Construction**
 
+___
+
 ## Index
 
 - [How CSS works](#how-css-work)
@@ -16,7 +18,9 @@ it minimal and simple so it can benefit others.
     - Ways to write CSS rules
 - [CSS rules - deep dive](#css-rules-deep)
 
-## How CSS works<a href="#how-css-work"></a>
+___
+
+## How CSS works<a name="how-css-work"></a>
 
 CSS is a language for specifying how documents are presented to users — how they are styled, laid out, etc.
 
@@ -53,5 +57,14 @@ CSS is a language for specifying how documents are presented to users — how th
 | 2 | Inernal Stylesheet    | Better than Inline, Relatively easy to maintain | Scope is limited to particular document, Should be avoided.
 | 3 | Inline Stylesheet     | Last resort, Must be avoided | Scope is limited to particular element, redundancy is highest, Really difficult to Maintain
 
-## CSS rules - deep dive<a href="#css-rules-deep" name="css-rules-deep"></a>
+___
+
+## CSS rules - deep dive<a name="css-rules-deep"></a>
+
+- #### Selectors
+
+1.  You can make a rule match multiple elements by including multiple selectors separated by commas i.e. `h1, h2`
+2.  Selectors can be chained together. i.e. `div p`. 
+3.  An element may be matched by several selectors, therefore several rules may set a given property multiple times.
+4.  CSS defines which one has precedence over the others and must be applied: this is called the `cascade algorithm`.
 
