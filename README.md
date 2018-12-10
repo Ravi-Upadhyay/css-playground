@@ -13,10 +13,13 @@ ___
 ## Index
 
 - [How CSS works](#how-css-work)
+    - Classification of CSS statements
     - Anatomy of CSS rule
     - Rendering
     - Ways to write CSS rules
 - [CSS rules - deep dive](#css-rules-deep)
+- [Code snippets]()
+- [Best practices]()
 
 ___
 
@@ -27,6 +30,14 @@ CSS is a language for specifying how documents are presented to users — how th
 - A **document** is usually a text file structured using a markup language
 - **Presenting** a document to a user means converting it into a usable form for your audience.
 - **Web browsers** apply **CSS rules** to a document to affect how they are displayed.
+
+### Classification of CSS statements
+
+![Classification of CSS Statements](resources/css-statements.png)
+
+- **CSS Rules** are the main building blocks of a style sheet — the most common block you'll see in CSS.
+- **At-rules** are used in CSS to convey metadata, conditional information, or other descriptive information. They start with an at sign (@), followed by an identifier to say what kind of rule it is
+
 
 ### Anatomy of CSS rules
 
@@ -59,12 +70,33 @@ CSS is a language for specifying how documents are presented to users — how th
 
 ___
 
-## CSS rules - deep dive<a name="css-rules-deep"></a>
+## CSS - deep dive<a name="css-rules-deep"></a>
 
-- #### Selectors
+- ### Selectors
 
-1.  You can make a rule match multiple elements by including multiple selectors separated by commas i.e. `h1, h2`
-2.  Selectors can be chained together. i.e. `div p`. 
-3.  An element may be matched by several selectors, therefore several rules may set a given property multiple times.
-4.  CSS defines which one has precedence over the others and must be applied: this is called the `cascade algorithm`.
+1.  **Simple selectors:** Match one or more elements based on `element type`, `class`, or `id`.
+2.  **Attribute selectors:** Match one or more elements based on their `attributes/attribute values`.
+3.  **Pseudo-classes:** Match one or more elements that exist in a certain state, such as an element that is being hovered over by the mouse pointer, or a checkbox that is currently `disabled` or `checked`, or an element that is the first child of its parent in the DOM tree.
+4.  **Pseudo-elements:** Match one or more parts of content that are in a certain position in relation to an element, for example the first word of each paragraph, or generated content appearing just before an element.
+5.  **Combinators:** These are not exactly selectors themselves, but ways of combining two or more selectors in useful ways for very specific selections. So for example, you could select only paragraphs that are direct descendants of divs, or paragraphs that come directly after headings. We can also refer selectors are **chained**.
+6.  **Multiple selectors:** Again, these are not separate selectors; the idea is that you can put multiple selectors on the same CSS rule, separated by commas, to apply a single set of declarations to all the elements selected by those selectors.
+7.  An element may be matched by several selectors, therefore several rules may set a given property multiple times.
+8.  CSS defines which one has **precedence** over the others and must be applied: this is called the `cascade algorithm`.
+
+#### Classification of selectors
+
+![Classification of CSS Selectors](resources/css-selectors.png)
+
+---
+
+## Code Snippets
+
+1. [Stackblitz - code snippet - CSS selectors invalid selector in group or chain](https://stackblitz.com/edit/css-selector-experiment)
+
+---
+
+## Best Practices
+
+1. You can add white space to make your style sheets more readable.
+2. Add comments
 
