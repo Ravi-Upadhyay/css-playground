@@ -20,6 +20,7 @@ ___
 - [CSS rules - deep dive](#css-rules-deep)
 - [Code snippets]()
 - [Best practices]()
+- [Resources](#resources)
 
 ___
 
@@ -41,7 +42,7 @@ CSS is a language for specifying how documents are presented to users — how th
 
 ### Anatomy of CSS rules
 
-![Anatomy of CSS Rule](resources\css-declaration.png)
+![Anatomy of CSS Rule](resources/css-declaration.png)
 
 - **Selector:**, which selects the element(s) you want to apply the updated property values to. 
 - **Property:** Human-readable identifiers that indicate which stylistic features you want to change. 
@@ -58,7 +59,7 @@ CSS is a language for specifying how documents are presented to users — how th
 4. If a **property** is unknown or if a **value** is not valid for a given **property**, the declaration is deemed invalid and is wholly ignored by the browser's **CSS engine**.
 
 
-![How HTML and CSS Renders](resources\Html-Css-Rendering.svg)
+![How HTML and CSS Renders](resources/Html-Css-Rendering.svg)
 
 ### Ways to write CSS rules
 
@@ -80,12 +81,30 @@ ___
 4.  **Pseudo-elements:** Match one or more parts of content that are in a certain position in relation to an element, for example the first word of each paragraph, or generated content appearing just before an element.
 5.  **Combinators:** These are not exactly selectors themselves, but ways of combining two or more selectors in useful ways for very specific selections. So for example, you could select only paragraphs that are direct descendants of divs, or paragraphs that come directly after headings. We can also refer selectors are **chained**.
 6.  **Multiple selectors:** Again, these are not separate selectors; the idea is that you can put multiple selectors on the same CSS rule, separated by commas, to apply a single set of declarations to all the elements selected by those selectors.
-7.  An element may be matched by several selectors, therefore several rules may set a given property multiple times.
-8.  CSS defines which one has **precedence** over the others and must be applied: this is called the `cascade algorithm`.
+7.  **Universal Selector (*)** It allows selecting all elements on a page. As it is rarely used to apply a style to every element on a page, it is often used in combination with other selectors
+8.  An element may be matched by several selectors, therefore several rules may set a given property multiple times.
+9.  CSS defines which one has **precedence** over the others and must be applied: this is called the `cascade algorithm`.
 
 #### Classification of selectors
 
 ![Classification of CSS Selectors](resources/css-selectors.png)
+
+
+#### Attribute selectors
+
+- Attribute selectors can be divided into two categories depending on the way they match attribute values: ***Presence and value attribute selectors*** and ***Substring value attribute selectors***.
+- **Presence and value attribute selectors** try to match an exact attribute and value.
+  - `[attr]`: Selects all elements with the attribute **attr**, whatever its value.
+  - `[attr=val]`: Selects all elements with attribute **attr** and value **val**.
+  - `[attr~=val]`: Selects all elements with attribute **attr** and **val** is one of space separated list of words contained in attr's value.
+  
+- **Substring value attribute selectors** are also known as "**RegExp-like selectors**", because they offer flexible matching in a similar fashion to regular expression (but to be clear, these selectors are not true regular expression)
+  - `[attr^=val]`: Selects all elements with attribute **attr** for which value starts with **val**.
+  - `[attr$=val]`: Selects all elements with attribute **attr** and for which value ends with **val**.
+  - `[attr*=val]`: Selects all elements with the attribute **attr** for which the value contains the substring **val**.
+
+![Attribute Selectors](resources/attribute-selectors.png)
+
 
 ---
 
@@ -100,3 +119,7 @@ ___
 1. You can add white space to make your style sheets more readable.
 2. Add comments
 
+## Resources
+
+1. [CSS Attribute Selectors - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors)
+2. [CSS Reference - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
