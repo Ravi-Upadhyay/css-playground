@@ -6,21 +6,27 @@ it minimal and simple so it can benefit others.
 
 > Cascading Style Sheets (CSS) is a stylesheet language used to describe the presentation of a document written in HTML or XML (including XML dialects such as SVG, MathML or XHTML). CSS describes how elements should be rendered on screen, on paper, in speech, or on other media.
 
-> **// TODO: Under Construction**
+> **// TODO:** Under construction, This document is not completed yet. Have a look at [To-do list](#to-do) 
+
+
 
 ___
 
 ## Index
 
 - [How CSS works](#how-css-work)
-    - Classification of CSS statements
-    - Anatomy of CSS rule
-    - Rendering
-    - Ways to write CSS rules
+  - Classification of CSS statements
+  - Anatomy of CSS rule
+  - Rendering
+  - Ways to write CSS rules
 - [CSS rules - deep dive](#css-rules-deep)
-- [Code snippets]()
-- [Best practices]()
-- [Resources](#resources)
+  - CSS Selectors
+- [Pseudo-classes and elements](sub-section/pseudo-classes-elements)
+- [CSS functions](sub-section/css-functions)
+- [Code snippets](#code-snippets)
+- [Best practices](#best-practices)
+- [Resources Over Web](#resources)
+- [To do list](#to-do)
 
 ___
 
@@ -106,20 +112,55 @@ ___
 ![Attribute Selectors](resources/attribute-selectors.png)
 
 
+#### Pseudo-classes and pseudo-elements
+
+- They don't select element rather certain part of elements, or elements in certain contexts.
+- They are classified into **pseudo-classes** and **pseudo-elements**.
+- A CSS **pseudo-class** is a keyword added to the end of a selector, preceded by a **colon (:)**, which is used to specify that you want to style the selected element but only when it is in a **certain state**. Example -  `a:hover`, `input:disabled`, `input:required`
+- **Pseudo-elements** are very much like pseudo-classes, but they have differences. They are keywords, this time preceded by **two colons (::)**, that can be added to the end of selectors to select a **certain part** of an element. Example - `span::after`, `span::before`
+
+#### Combinators and selectors
+
+- **Descendent Combinator**: Any element matching B that is a descendant of an element matching A (that is, a child, or a child of a child, etc.). the combinator is one or more spaces or dual greater than signs.
+- **Child Combinator**: Any element matching B is a direct child of element matching A.
+- **Adjacent Sibling Combinator**: Any element matching B that is the next sibling of an element matching A (that is, the next child of the same parent).
+- **General Sibling Combinator**: Any element matching B that is one of the next siblings of an element matching A (that is, one of the next children of the same parent).
+
+
+![Combinators And Selectors](resources/combinators-and-selectors.png)
+
+
 ---
 
-## Code Snippets
+## Code Snippets<a name="code-snippets"></a>
 
 1. [Stackblitz - code snippet - CSS selectors invalid selector in group or chain](https://stackblitz.com/edit/css-selector-experiment)
 
 ---
 
-## Best Practices
+## Best Practices<a name="best-practices"></a>
 
 1. You can add white space to make your style sheets more readable.
 2. Add comments
 
-## Resources
+---
+
+## Resources Over Web<a name="resources"></a>
 
 1. [CSS Attribute Selectors - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Attribute_selectors)
-2. [CSS Reference - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+2. [CSS Pseudo-Classes & Pseudo-Elements - MDN](https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Pseudo-classes_and_pseudo-elements)
+3. [CSS Reference - MDN](https://developer.mozilla.org/en-US/docs/Web/CSS/Reference)
+
+---
+
+## To do list<a name="to-do"></a>
+
+Here I am listing down all the topics which I have to explore more. Either came across while learning CSS but decided to explore later or want to spend some more time.
+
+1. CSS Functions (New folder created under sub-section)
+   1. attr()
+2. CSS properties
+   1. content 
+3. Experiment with attribute selectors
+4. Pseudo-classes and psedo elements in detail
+5. Add into Best practices section
