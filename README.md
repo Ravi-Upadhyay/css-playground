@@ -129,6 +129,10 @@ ___
 
 ![Combinators And Selectors](resources/combinators-and-selectors.png)
 
+- ### Cascade and inheritance
+
+  - In the situation where multiple CSS rules will have selectors matching the same element. In such cases, which CSS rule "*wins*", and ends up being the one that is finally applied to the element? this is controlled by mechanism called **cascade**.
+  - 
 
 ---
 
