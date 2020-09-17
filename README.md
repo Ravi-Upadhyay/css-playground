@@ -8,7 +8,7 @@ it minimal and simple so it can benefit others.
 
 > **// TODO:** Under construction, This document is not completed yet. Have a look at [To-do list](#to-do) 
 
-
+> Note: Important. Need to move most of the documentation and notes to the wiki. New notes are being added there: [CSS Playground Wiki](https://github.com/Ravi-Upadhyay/css-playground/wiki)
 
 ___
 
